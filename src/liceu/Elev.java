@@ -13,5 +13,10 @@ package liceu;
 public class Elev extends Utilizator implements IElev{
     int CNP;
     String dataNasterii;
+
+    @Override
+    public void afisareSituatieScolara() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
