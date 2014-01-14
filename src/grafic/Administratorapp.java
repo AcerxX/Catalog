@@ -800,16 +800,8 @@ public class Administratorapp extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        try {
-            // TODO add your handling code here:
-            liceu.Catalog.addCredential(usernameSecretar.getText());
-            liceu.Catalog.addCredential(parolaSecretar.getText());
-            liceu.Catalog.addCredential(ncSecretar.getText());
-            liceu.Catalog.addCredential(cnpSecretar.getText());
-            liceu.Catalog.addCredential("Secretar");
-        } catch (IOException ex) {
-            Logger.getLogger(Administratorapp.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        liceu.Administrator admin = new liceu.Administrator(usernameSecretar.getText(), parolaSecretar.getText(),ncSecretar.getText(),cnpSecretar.getText(),"Secretar");
+        admin.addUser();
         usernameSecretar.setText("");
         parolaSecretar.setText("");
         ncSecretar.setText("");
@@ -839,16 +831,8 @@ public class Administratorapp extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-        try {
-            // TODO add your handling code here:
-            liceu.Catalog.addCredential(usernameProfesor.getText());
-            liceu.Catalog.addCredential(parolaProfesor.getText());
-            liceu.Catalog.addCredential(ncProfesor.getText());
-            liceu.Catalog.addCredential(cnpProfesor.getText());
-            liceu.Catalog.addCredential("Profesor");
-        } catch (IOException ex) {
-            Logger.getLogger(Administratorapp.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        liceu.Administrator admin = new liceu.Administrator(usernameProfesor.getText(), parolaProfesor.getText(),ncProfesor.getText(),cnpProfesor.getText(),"Profesor");
+        admin.addUser();
         usernameProfesor.setText("");
         parolaProfesor.setText("");
         ncProfesor.setText("");
@@ -876,16 +860,8 @@ public class Administratorapp extends javax.swing.JFrame {
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        try {
-            // TODO add your handling code here:
-            liceu.Catalog.addCredential(usernameElev.getText());
-            liceu.Catalog.addCredential(parolaElev.getText());
-            liceu.Catalog.addCredential(ncElev.getText());
-            liceu.Catalog.addCredential(cnpElev.getText());
-            liceu.Catalog.addCredential("Elev");
-        } catch (IOException ex) {
-            Logger.getLogger(Administratorapp.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        liceu.Administrator admin = new liceu.Administrator(usernameElev.getText(), parolaElev.getText(),ncElev.getText(),cnpElev.getText(),"Elev");
+        admin.addUser();
         usernameElev.setText("");
         parolaElev.setText("");
         ncElev.setText("");

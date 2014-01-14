@@ -11,7 +11,7 @@ package liceu;
  * @author alexa_000
  */
 public interface IAdministrator {
-    public boolean addUser();
-    public boolean delUser();
+    public void addUser();
+    public void delUser();
     public boolean listUseri();
 }
