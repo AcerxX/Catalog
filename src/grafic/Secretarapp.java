@@ -573,10 +573,48 @@ public class Secretarapp extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(Administratorapp.class.getName()).log(Level.SEVERE, null, ex);
         }
+        clasaDeSters.removeAllItems();
+        BufferedReader fisier;
+        try {
+            ArrayList<String> vector = new ArrayList<>();
+            fisier = new BufferedReader(new FileReader("clase"));
+            for(String line; (line = fisier.readLine())!= null;){
+                vector.add(line);                  
+            }
+            for(int i=0;i<vector.size();i++)
+                clasaDeSters.addItem(vector.get(i));
+            
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        liceu.Secretar s = new liceu.Secretar();
+        s.delClasa((String)clasaDeSters.getSelectedItem());
+        clasaDeSters.removeAllItems();
+        BufferedReader fisier;
+        try {
+            ArrayList<String> vector = new ArrayList<>();
+            fisier = new BufferedReader(new FileReader("clase"));
+            for(String line; (line = fisier.readLine())!= null;){
+                vector.add(line);                  
+            }
+            for(int i=0;i<vector.size();i++)
+                clasaDeSters.addItem(vector.get(i));
+            
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        }            
+            
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

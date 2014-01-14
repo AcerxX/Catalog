@@ -6,10 +6,16 @@
 
 package liceu;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -58,8 +64,35 @@ public class Secretar extends Utilizator implements ISecretar{
     }
 
     @Override
-            public boolean delClasa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            public void delClasa(String clasaDeSters) {
+        BufferedReader fisier;
+        try {
+            fisier = new BufferedReader(new FileReader("clase"));
+            BufferedWriter fisier_nou;
+            ArrayList<String> vector = new ArrayList<>();
+            for(String line; (line = fisier.readLine())!= null;){
+                vector.add(line);                  
+            }
+            for(int i=0;i<vector.size();i++){
+                if(clasaDeSters.equals(vector.get(i)))
+                {
+                    vector.remove(i);
+                    //NEED MORE HERE
+                    fisier_nou = new BufferedWriter(new FileWriter("clase"));
+                    for(i=0;i<vector.size();i++){
+                        fisier_nou.write(vector.get(i));
+                        fisier_nou.newLine();
+                    }
+                    fisier_nou.close();
+                }
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Secretar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Secretar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+            
     }
 
     @Override

@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public interface ISecretar {
     public void addClasa() throws IOException;
-    public boolean delClasa();
+    public void delClasa(String clasaDeSters);
     public boolean editClasa();
     public boolean addMaterieProfesor(Profesor profesor);
     public boolean delMaterieProfesor(Profesor profesor);
