@@ -889,32 +889,17 @@ public class Administratorapp extends javax.swing.JFrame {
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         String s = (String) listaSecretari.getSelectedValue();
-        int i;
+        liceu.Administrator admin = new liceu.Administrator();
+        admin.delUser(s);
         BufferedReader fisier;
-        BufferedWriter fisier_nou;
         try {            
             fisier = new BufferedReader(new FileReader("credentials"));
             ArrayList<String> vector = new ArrayList<>();
             for(String line; (line = fisier.readLine())!= null;){
                 vector.add(line);                  
-            }            
-            for(i=0;i<vector.size();i=i+5){               
-                if(s.equals(vector.get(i))){
-                        vector.remove(i+4);
-                        vector.remove(i+3);
-                        vector.remove(i+2);
-                        vector.remove(i+1);
-                        vector.remove(i);
-                        fisier_nou = new BufferedWriter(new FileWriter("credentials"));
-                        for(i=0;i<vector.size();i++){
-                             fisier_nou.write(vector.get(i));
-                             fisier_nou.newLine();
-                        }
-                        fisier_nou.close();
-                    }
-            }        
+            }                   
             listModelSecretari.clear();
-            for(i=0;i<vector.size();i=i+5){
+            for(int i=0;i<vector.size();i=i+5){
                 if(vector.get(i+4).equals("Secretar"))
                     listModelSecretari.addElement(vector.get(i));
             }

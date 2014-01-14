@@ -12,6 +12,6 @@ package liceu;
  */
 public interface IAdministrator {
     public void addUser();
-    public void delUser();
+    public void delUser(String userDeSters);
     public boolean listUseri();
 }
