@@ -209,8 +209,6 @@ public class Administratorapp extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
 
         adaugareClasa.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         adaugareClasa.setTitle("Adaugare Clasa");
@@ -743,12 +741,6 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Help");
-        jMenuBar1.add(jMenu3);
-
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -1178,8 +1170,6 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JList jList7;
     private javax.swing.JList jList9;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;

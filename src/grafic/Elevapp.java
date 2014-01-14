@@ -62,13 +62,12 @@ public class Elevapp extends javax.swing.JFrame {
         jList3 = new javax.swing.JList();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         schimbare_parola.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         schimbare_parola.setAlwaysOnTop(true);
         schimbare_parola.setLocationByPlatform(true);
         schimbare_parola.setMinimumSize(new java.awt.Dimension(231, 200));
-        schimbare_parola.setPreferredSize(new java.awt.Dimension(231, 200));
         schimbare_parola.setType(java.awt.Window.Type.POPUP);
 
         jLabel6.setText("Parola Veche:");
@@ -179,10 +178,18 @@ public class Elevapp extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jList3);
 
         jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\emergency-exit-icon-10277712.jpg")); // NOI18N
+        jMenuItem1.setText("Exit");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -311,6 +318,10 @@ public class Elevapp extends javax.swing.JFrame {
         schimbare_parola.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -369,8 +380,8 @@ public class Elevapp extends javax.swing.JFrame {
     private javax.swing.JList jList2;
     private javax.swing.JList jList3;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;

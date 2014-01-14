@@ -52,6 +52,7 @@ public class login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        sorry = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -153,6 +154,12 @@ public class login extends javax.swing.JFrame {
         jLabel5.setText("Tema POO - Catalog Școlar");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 472, -1, -1));
 
+        sorry.setForeground(new java.awt.Color(204, 255, 255));
+        sorry.setText("jLabel7");
+        sorry.setVisible(false);
+        jPanel1.add(sorry, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 290, -1));
+
+        jLabel6.setForeground(new java.awt.Color(204, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\86718.jpg")); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 490));
 
@@ -270,7 +277,8 @@ public class login extends javax.swing.JFrame {
                             break;
                     }
                     dispose();
-                }                
+                }
+                else {sorry.setVisible(true); sorry.setText("Ne apre rau. Usarnameul sau parola este gresita!");}
             }        
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -373,6 +381,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPasswordField pass;
+    private javax.swing.JLabel sorry;
     public static javax.swing.JFormattedTextField user;
     // End of variables declaration//GEN-END:variables
     public static String Name;
