@@ -10,6 +10,7 @@ import grafic.Administratorapp;
 import static grafic.Administratorapp.listModelSecretari;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -99,6 +100,46 @@ public class Administrator extends Utilizator implements IAdministrator{
     @Override
     public boolean listUseri() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+        public void addMaterie(String idMaterie) throws IOException{
+        BufferedWriter clase = new BufferedWriter(new FileWriter("fmaterii", true));
+        clase.write(idMaterie);
+        clase.newLine();
+        clase.close();        
+        }
+
+    @Override
+        public void delMaterie(String materieDeSters) {
+        BufferedReader fisier;
+        try {
+            fisier = new BufferedReader(new FileReader("fmaterii"));
+            BufferedWriter fisier_nou;
+            ArrayList<String> vector = new ArrayList<>();
+            for(String line; (line = fisier.readLine())!= null;){
+                vector.add(line);                  
+            }
+            for(int i=0;i<vector.size();i++){
+                if(materieDeSters.equals(vector.get(i)))
+                {
+                    vector.remove(i);
+                    //NEED MORE HERE
+                    fisier_nou = new BufferedWriter(new FileWriter("fmaterii"));
+                    for(i=0;i<vector.size();i++){
+                        fisier_nou.write(vector.get(i));
+                        fisier_nou.newLine();
+                    }
+                    fisier_nou.close();
+                }
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Secretar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Secretar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+            
     }
     
 }

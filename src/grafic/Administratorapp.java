@@ -66,6 +66,13 @@ public class Administratorapp extends javax.swing.JFrame {
             }
             for(int j=0;j<vector.size();j++)
                 clasaDeSters.addItem(vector.get(j));
+        BufferedReader fisier3 = new BufferedReader(new FileReader("fmaterii"));
+        ArrayList<String> vector2 = new ArrayList<>();
+        for(String line; (line = fisier3.readLine())!= null;){
+                vector2.add(line);                  
+        }
+        for(int k=0;k<vector.size();k++)
+                materieDeSters.addItem(vector2.get(k));
     }
 
     /**
@@ -83,7 +90,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         adaugareMaterie = new javax.swing.JFrame();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        materieDeAdaugat = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         usernameLabel = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -106,9 +113,8 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList();
         jButton8 = new javax.swing.JButton();
+        materieDeSters = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -285,7 +291,7 @@ public class Administratorapp extends javax.swing.JFrame {
                     .addGroup(adaugareMaterieLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                        .addComponent(materieDeAdaugat, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adaugareMaterieLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton7)))
@@ -297,7 +303,7 @@ public class Administratorapp extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(adaugareMaterieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(materieDeAdaugat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -400,17 +406,15 @@ public class Administratorapp extends javax.swing.JFrame {
         });
         jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 150, 50));
 
-        jList3.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Matematica", "Fizica", "Chimie", "Informatica", "Sport", "Roamana", "Geografie" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList3);
-
-        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 150, 200));
-
         jButton8.setText("Stergere Materie");
-        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 150, 50));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 150, 50));
+
+        jPanel4.add(materieDeSters, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 170, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 450));
@@ -812,8 +816,7 @@ public class Administratorapp extends javax.swing.JFrame {
                 vector.add(line);                  
             }
             for(int i=0;i<vector.size();i++)
-                clasaDeSters.addItem(vector.get(i));
-            
+                clasaDeSters.addItem(vector.get(i));          
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
@@ -825,12 +828,34 @@ public class Administratorapp extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        liceu.Administrator admin = new liceu.Administrator();
+        try {
+            admin.addMaterie(materieDeAdaugat.getText());
+        } catch (IOException ex) {
+            Logger.getLogger(Administratorapp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        materieDeSters.removeAllItems();
+        BufferedReader fisier2;
+        try {
+            ArrayList<String> vector = new ArrayList<>();
+            fisier2 = new BufferedReader(new FileReader("fmaterii"));
+            for(String line; (line = fisier2.readLine())!= null;){
+                vector.add(line);                  
+            }
+            for(int i=0;i<vector.size();i++)
+                materieDeSters.addItem(vector.get(i));          
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        }
         adaugareMaterie.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        adaugareClasa.setVisible(true);
+        adaugareMaterie.setVisible(true);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         adaugareMaterie.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -1029,6 +1054,28 @@ public class Administratorapp extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        liceu.Administrator admin = new liceu.Administrator();
+        admin.delMaterie((String)materieDeSters.getSelectedItem());
+        materieDeSters.removeAllItems();
+        BufferedReader fisier;
+        try {
+            ArrayList<String> vector = new ArrayList<>();
+            fisier = new BufferedReader(new FileReader("fmaterii"));
+            for(String line; (line = fisier.readLine())!= null;){
+                vector.add(line);                  
+            }
+            for(int i=0;i<vector.size();i++)
+                materieDeSters.addItem(vector.get(i));
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Secretarapp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1147,7 +1194,6 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JList jList10;
     private javax.swing.JList jList11;
     private javax.swing.JList jList2;
-    private javax.swing.JList jList3;
     private javax.swing.JList jList6;
     private javax.swing.JList jList7;
     private javax.swing.JList jList9;
@@ -1171,7 +1217,6 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
@@ -1183,11 +1228,12 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane9;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel labelusernamesecretar;
     private javax.swing.JList listaElevi;
     private javax.swing.JList listaProfesori;
     private javax.swing.JList listaSecretari;
+    private javax.swing.JTextField materieDeAdaugat;
+    private javax.swing.JComboBox materieDeSters;
     private javax.swing.JTextField ncElev;
     private javax.swing.JTextField ncProfesor;
     private javax.swing.JTextField ncSecretar;
