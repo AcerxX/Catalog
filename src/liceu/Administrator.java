@@ -18,7 +18,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static liceu.Catalog.credentials;
 
 /**
  *
@@ -27,14 +26,23 @@ import static liceu.Catalog.credentials;
 public class Administrator extends Utilizator implements IAdministrator{
 
     public BufferedWriter credentials;
-    private String username, password, numeComplet, CNP, statut;
+    private final String username, password, numeComplet, CNP, statut, clasa;
     
+    public Administrator(String user, String parola, String nume_complet, String cnp, String text, String text2){
+        this.username = user;
+        this.password = parola;
+        this.numeComplet = nume_complet;
+        this.CNP = cnp;
+        this.statut = text;
+        this.clasa = text2;
+    }
     public Administrator(String user, String parola, String nume_complet, String cnp, String text){
         this.username = user;
         this.password = parola;
         this.numeComplet = nume_complet;
         this.CNP = cnp;
         this.statut = text;
+        this.clasa = "";
     }
 
     public Administrator() {
@@ -43,6 +51,7 @@ public class Administrator extends Utilizator implements IAdministrator{
         this.numeComplet = "";
         this.CNP = "";
         this.statut = "";
+        this.clasa = "";
     }
     @Override
     public void addUser() {
@@ -62,14 +71,27 @@ public class Administrator extends Utilizator implements IAdministrator{
         } catch (IOException ex) {
             Logger.getLogger(Administrator.class.getName()).log(Level.SEVERE, null, ex);
         }
+        String path = "elevi/"+this.clasa;
+        try {
+            try (BufferedWriter addElevInClasa = new BufferedWriter(new FileWriter(path))) {
+                addElevInClasa.write(numeComplet);
+                addElevInClasa.newLine();
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Administrator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     @Override
     public void delUser(String userDeSters) {
         BufferedReader fisier;
         BufferedWriter fisier_nou;
+        BufferedReader fisier2;
+        BufferedWriter fisier_nou2;
         try {            
             fisier = new BufferedReader(new FileReader("credentials"));
+            
             ArrayList<String> vector = new ArrayList<>();
             for(String line; (line = fisier.readLine())!= null;){
                 vector.add(line);                  

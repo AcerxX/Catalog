@@ -549,7 +549,7 @@ public class Secretarapp extends javax.swing.JFrame {
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 400));
 
         jLabel25.setText("Bine ai venit "+login.user.getText()+" | Secretar");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 110, -1));
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 240, -1));
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);

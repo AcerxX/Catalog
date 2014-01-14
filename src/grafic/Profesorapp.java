@@ -120,7 +120,7 @@ public class Profesorapp extends javax.swing.JFrame {
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 211, -1, -1));
 
         jLabel11.setText("Bine ai venit "+login.user.getText()+" | Profesor");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 230, -1));
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);

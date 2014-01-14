@@ -165,20 +165,16 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         usernameElev = new javax.swing.JTextField();
         parolaElev = new javax.swing.JTextField();
         ncElev = new javax.swing.JTextField();
         cnpElev = new javax.swing.JTextField();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jComboBox4 = new javax.swing.JComboBox();
+        clasaElev = new javax.swing.JComboBox();
         jButton15 = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
         listaElevi = new javax.swing.JList(listModelElevi);
         jButton16 = new javax.swing.JButton();
-        jComboBox10 = new javax.swing.JComboBox();
         jLabel29 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
@@ -314,7 +310,7 @@ public class Administratorapp extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usernameLabel.setText("Bine ai venit "+login.user.getText()+" | Administrator");
-        getContentPane().add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 90, -1));
+        getContentPane().add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 220, -1));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -363,7 +359,7 @@ public class Administratorapp extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 110, 50));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 150, 50));
 
         jList2.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Matematica", "Fizica", "Informatica" };
@@ -388,7 +384,7 @@ public class Administratorapp extends javax.swing.JFrame {
                 clasaDeStersActionPerformed(evt);
             }
         });
-        jPanel3.add(clasaDeSters, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 90, -1));
+        jPanel3.add(clasaDeSters, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 130, -1));
 
         jLabel1.setForeground(new java.awt.Color(204, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
@@ -587,27 +583,16 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel24.setText("CNP");
         jPanel9.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        jLabel25.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel25.setText("Adresa");
-        jPanel9.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
         jLabel26.setForeground(new java.awt.Color(204, 255, 255));
         jLabel26.setText("Clasa");
-        jPanel9.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+        jPanel9.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
         jPanel9.add(usernameElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 140, -1));
         jPanel9.add(parolaElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 140, -1));
         jPanel9.add(ncElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 140, -1));
         jPanel9.add(cnpElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 140, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Adresa completa");
-        jScrollPane9.setViewportView(jTextArea1);
-
-        jPanel9.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 140, 70));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "9A", "9B", "9C", "9D", "10A" }));
-        jPanel9.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+        clasaElev.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "9A", "9B", "9C", "9D", "10A" }));
+        jPanel9.add(clasaElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, -1));
 
         jButton15.setText("Adauga Elev");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -628,9 +613,6 @@ public class Administratorapp extends javax.swing.JFrame {
             }
         });
         jPanel9.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 140, 40));
-
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel9.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
         jLabel29.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel9.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 430));
@@ -925,7 +907,7 @@ public class Administratorapp extends javax.swing.JFrame {
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        liceu.Administrator admin = new liceu.Administrator(usernameElev.getText(), parolaElev.getText(),ncElev.getText(),cnpElev.getText(),"Elev");
+        liceu.Administrator admin = new liceu.Administrator(usernameElev.getText(), parolaElev.getText(),ncElev.getText(),cnpElev.getText(),"Elev",(String)clasaElev.getSelectedItem());
         admin.addUser();
         usernameElev.setText("");
         parolaElev.setText("");
@@ -1119,6 +1101,7 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JFrame adaugareClasa;
     private javax.swing.JFrame adaugareMaterie;
     private javax.swing.JComboBox clasaDeSters;
+    private javax.swing.JComboBox clasaElev;
     private javax.swing.JTextField cnpElev;
     private javax.swing.JTextField cnpProfesor;
     private javax.swing.JTextField cnpSecretar;
@@ -1145,10 +1128,8 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox jComboBox10;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox jComboBox5;
     private javax.swing.JComboBox jComboBox6;
     private javax.swing.JComboBox jComboBox7;
@@ -1170,7 +1151,6 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -1221,12 +1201,10 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JLabel labelusernamesecretar;
     private javax.swing.JList listaElevi;
