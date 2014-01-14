@@ -23,6 +23,9 @@ public class Secretar extends Utilizator implements ISecretar{
     public Secretar(String text) {
         this.idClasa = text;
     }
+    public Secretar(){
+        this.idClasa = "";
+    }
     
     @Override
         public void addClasa() throws IOException{

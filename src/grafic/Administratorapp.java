@@ -915,34 +915,18 @@ public class Administratorapp extends javax.swing.JFrame {
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
         String s = (String) listaProfesori.getSelectedValue();
-        int i;
-        BufferedReader fisier;
-        BufferedWriter fisier_nou;
+        liceu.Administrator admin = new liceu.Administrator();
+        admin.delUser(s);
+        
+        BufferedReader fisier;        
         try {            
             fisier = new BufferedReader(new FileReader("credentials"));
             ArrayList<String> vector = new ArrayList<>();
             for(String line; (line = fisier.readLine())!= null;){
                 vector.add(line);                  
             }
-            
-            for(i=0;i<vector.size();i=i+5){
-               
-                if(s.equals(vector.get(i))){
-                        vector.remove(i+4);
-                        vector.remove(i+3);
-                        vector.remove(i+2);
-                        vector.remove(i+1);
-                        vector.remove(i);
-                        fisier_nou = new BufferedWriter(new FileWriter("credentials"));
-                        for(i=0;i<vector.size();i++){
-                             fisier_nou.write(vector.get(i));
-                             fisier_nou.newLine();
-                        }
-                        fisier_nou.close();
-                    }
-            }         
             listModelProfesori.clear();
-            for(i=0;i<vector.size();i=i+5){
+            for(int i=0;i<vector.size();i=i+5){
                 if(vector.get(i+4).equals("Profesor"))
                     listModelProfesori.addElement(vector.get(i));
             }
@@ -956,33 +940,18 @@ public class Administratorapp extends javax.swing.JFrame {
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         String s = (String) listaElevi.getSelectedValue();
-        int i;
-        BufferedReader fisier;
-        BufferedWriter fisier_nou;
+        liceu.Administrator admin = new liceu.Administrator();
+        admin.delUser(s);
+        
+        BufferedReader fisier;        
         try {            
             fisier = new BufferedReader(new FileReader("credentials"));
             ArrayList<String> vector = new ArrayList<>();
             for(String line; (line = fisier.readLine())!= null;){
                 vector.add(line);                  
             }
-            
-            for(i=0;i<vector.size();i=i+5){               
-                if(s.equals(vector.get(i))){
-                        vector.remove(i+4);
-                        vector.remove(i+3);
-                        vector.remove(i+2);
-                        vector.remove(i+1);
-                        vector.remove(i);
-                        fisier_nou = new BufferedWriter(new FileWriter("credentials"));
-                        for(i=0;i<vector.size();i++){
-                             fisier_nou.write(vector.get(i));
-                             fisier_nou.newLine();
-                        }
-                        fisier_nou.close();
-                    }
-            }
             listModelElevi.clear();
-            for(i=0;i<vector.size();i=i+5){
+            for(int i=0;i<vector.size();i=i+5){
                 if(vector.get(i+4).equals("Elev"))
                     listModelElevi.addElement(vector.get(i));
             }
