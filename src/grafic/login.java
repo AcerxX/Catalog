@@ -7,18 +7,14 @@
 package grafic;
 
 import java.awt.event.KeyEvent;
-import static java.awt.event.KeyEvent.VK_ENTER;
-import java.awt.image.BufferedImage;
+
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import org.eclipse.persistence.internal.oxm.mappings.Login;
 
