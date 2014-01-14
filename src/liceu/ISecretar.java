@@ -6,12 +6,14 @@
 
 package liceu;
 
+import java.io.IOException;
+
 /**
  *
  * @author alexa_000
  */
 public interface ISecretar {
-    public boolean addClasa();
+    public void addClasa() throws IOException;
     public boolean delClasa();
     public boolean editClasa();
     public boolean addMaterieProfesor(Profesor profesor);

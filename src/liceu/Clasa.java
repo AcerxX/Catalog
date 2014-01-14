@@ -6,18 +6,16 @@
 
 package liceu;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
  * @author alexa_000
  */
 public class Clasa {
-    int idClasa;
+    String idClasa;
     String[] elev;
     String[] materie;
-    
-    public void addElev(int idClasa){
-        
-    }
-    
-    
 }

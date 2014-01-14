@@ -72,7 +72,7 @@ public class Administratorapp extends javax.swing.JFrame {
 
         adaugareClasa = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        numeClasa = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         adaugareMaterie = new javax.swing.JFrame();
         jLabel5 = new javax.swing.JLabel();
@@ -232,7 +232,7 @@ public class Administratorapp extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(numeClasa, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(114, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adaugareClasaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -245,7 +245,7 @@ public class Administratorapp extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(adaugareClasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numeClasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -772,7 +772,14 @@ public class Administratorapp extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        
+            // TODO add your handling code here:
+            liceu.Secretar s = new liceu.Secretar(numeClasa.getText());
+        try {
+            s.addClasa();
+        } catch (IOException ex) {
+            Logger.getLogger(Administratorapp.class.getName()).log(Level.SEVERE, null, ex);
+        }
         adaugareClasa.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -1176,7 +1183,6 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel labelusernamesecretar;
@@ -1186,6 +1192,7 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JTextField ncElev;
     private javax.swing.JTextField ncProfesor;
     private javax.swing.JTextField ncSecretar;
+    public javax.swing.JTextField numeClasa;
     private javax.swing.JLabel numecomplet;
     private javax.swing.JTextField parolaElev;
     private javax.swing.JTextField parolaProfesor;
