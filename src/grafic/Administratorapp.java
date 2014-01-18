@@ -98,7 +98,6 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -314,7 +313,7 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel37.setText("Bine ai venit");
+        jLabel37.setText("Welcome");
         jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 200, 70));
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -324,13 +323,8 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel40.setText("Foloseste taburile de mai sus pentru a modifica");
+        jLabel40.setText("Use tabs above to modify the various sections of the register!");
         jPanel2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
-
-        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel39.setText(" diversele sectiuni ale catalogului!");
-        jPanel2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         jLabel15.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 450));
@@ -339,7 +333,7 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Adaugare Clasa");
+        jButton1.setText("Add Class");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -351,7 +345,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel4.setText("Materiile Clasei");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 80, -1));
 
-        jButton2.setText("Stergere Clasa");
+        jButton2.setText("Delete Class");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -368,13 +362,13 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 100, -1));
 
-        jButton4.setText("Elimina");
+        jButton4.setText("Remove");
         jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 100, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Romana", "Chimie", "Sport" }));
         jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 120, -1));
 
-        jButton5.setText("Adauga");
+        jButton5.setText("Add");
         jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 120, 50));
 
         clasaDeSters.addActionListener(new java.awt.event.ActionListener() {
@@ -388,11 +382,11 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 450));
 
-        jTabbedPane2.addTab("Clase", jPanel3);
+        jTabbedPane2.addTab("Classes", jPanel3);
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton6.setText("Adaugare Materie");
+        jButton6.setText("Add Subject");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -400,7 +394,7 @@ public class Administratorapp extends javax.swing.JFrame {
         });
         jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 150, 50));
 
-        jButton8.setText("Stergere Materie");
+        jButton8.setText("Delete Subject");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -413,26 +407,26 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 450));
 
-        jTabbedPane2.addTab("Materii", jPanel4);
+        jTabbedPane2.addTab("Subjects", jPanel4);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         numecomplet.setForeground(new java.awt.Color(204, 255, 255));
-        numecomplet.setText("Nume Complet");
+        numecomplet.setText("Full Name");
         jPanel1.add(numecomplet, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
         labelusernamesecretar.setForeground(new java.awt.Color(204, 255, 255));
-        labelusernamesecretar.setText("Nume Utilizator");
+        labelusernamesecretar.setText("Username");
         jPanel1.add(labelusernamesecretar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
         parolaSecretarlabel.setForeground(new java.awt.Color(204, 255, 255));
-        parolaSecretarlabel.setText("Parola");
+        parolaSecretarlabel.setText("Password");
         jPanel1.add(parolaSecretarlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
         jPanel1.add(ncSecretar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 110, -1));
         jPanel1.add(usernameSecretar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 110, -1));
         jPanel1.add(parolaSecretar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 110, -1));
 
-        jButton9.setText("Adauga");
+        jButton9.setText("Add");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -448,7 +442,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 430));
 
-        jTabbedPane7.addTab("Adauga", jPanel1);
+        jTabbedPane7.addTab("Add", jPanel1);
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -470,12 +464,12 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jTabbedPane7.addTab("List", jPanel6);
 
-        jTabbedPane2.addTab("Secretari", jTabbedPane7);
+        jTabbedPane2.addTab("Secretaries", jTabbedPane7);
 
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel19.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel19.setText("Nume Complet");
+        jLabel19.setText("Full Name");
         jPanel7.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel20.setForeground(new java.awt.Color(204, 255, 255));
@@ -483,11 +477,11 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel7.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
         jLabel21.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel21.setText("Parola");
+        jLabel21.setText("Password");
         jPanel7.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         jLabel22.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel22.setText("Materie");
+        jLabel22.setText("Subject");
         jPanel7.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         jList6.setModel(new javax.swing.AbstractListModel() {
@@ -500,7 +494,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel7.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 160, 150));
 
         jLabel23.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel23.setText("Clase:");
+        jLabel23.setText("Classes:");
         jPanel7.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, -1, -1));
         jPanel7.add(ncProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 160, -1));
         jPanel7.add(usernameProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 160, -1));
@@ -521,10 +515,10 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jPanel7.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 100, -1));
 
-        jButton12.setText("Elimina");
+        jButton12.setText("Remove");
         jPanel7.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 100, -1));
 
-        jButton13.setText("Adauga Profesor");
+        jButton13.setText("Add Teacher");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -540,11 +534,11 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel7.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 430));
 
-        jTabbedPane8.addTab("Adauga", jPanel7);
+        jTabbedPane8.addTab("Add", jPanel7);
 
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton14.setText("Stergere Profesor Selectat");
+        jButton14.setText("Delete Selected Teacher");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -559,9 +553,9 @@ public class Administratorapp extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel8.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 430));
 
-        jTabbedPane8.addTab("Modifica", jPanel8);
+        jTabbedPane8.addTab("Modify", jPanel8);
 
-        jTabbedPane2.addTab("Profesori", jTabbedPane8);
+        jTabbedPane2.addTab("Teachers", jTabbedPane8);
 
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -570,11 +564,11 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel9.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel12.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel12.setText("Parola");
+        jLabel12.setText("Password");
         jPanel9.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         jLabel13.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel13.setText("Nume Complet");
+        jLabel13.setText("Full Name");
         jPanel9.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jLabel24.setForeground(new java.awt.Color(204, 255, 255));
@@ -582,7 +576,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel9.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jLabel26.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel26.setText("Clasa");
+        jLabel26.setText("Class");
         jPanel9.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
         jPanel9.add(usernameElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 140, -1));
         jPanel9.add(parolaElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 140, -1));
@@ -592,7 +586,7 @@ public class Administratorapp extends javax.swing.JFrame {
         clasaElev.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "9A", "9B", "9C", "9D", "10A" }));
         jPanel9.add(clasaElev, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, -1));
 
-        jButton15.setText("Adauga Elev");
+        jButton15.setText("Add Student");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
@@ -604,7 +598,7 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jPanel9.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 140, 150));
 
-        jButton16.setText("Stergere Elev");
+        jButton16.setText("Delete Student");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
@@ -620,7 +614,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel27.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel27.setText("Elev");
+        jLabel27.setText("Student");
         jPanel12.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
         jList9.setModel(new javax.swing.AbstractListModel() {
@@ -632,15 +626,15 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jPanel12.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 140, 160));
 
-        jButton17.setText("Alege");
+        jButton17.setText("Choose");
         jPanel12.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
 
         jLabel28.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel28.setText("Materie");
+        jLabel28.setText("Subject");
         jPanel12.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, -1));
 
         jLabel30.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel30.setText("Clasa");
+        jLabel30.setText("Class");
         jPanel12.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "9A", "9B", "9C", "9D", "10A", " " }));
@@ -651,22 +645,22 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel12.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 50, -1));
 
         jLabel31.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel31.setText("Nota");
+        jLabel31.setText("Grade");
         jPanel12.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
-        jButton18.setText("Adauga");
-        jPanel12.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
+        jButton18.setText("Add");
+        jPanel12.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 70, -1));
 
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "9", "5" }));
         jPanel12.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 50, -1));
 
-        jButton19.setText("Sterge");
+        jButton19.setText("Delete");
         jPanel12.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 70, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel12.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 430));
 
-        jTabbedPane9.addTab("Note", jPanel12);
+        jTabbedPane9.addTab("Grades", jPanel12);
 
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -674,7 +668,7 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel13.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel32.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel32.setText("Clasa");
+        jLabel32.setText("Class");
         jPanel13.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jList10.setModel(new javax.swing.AbstractListModel() {
@@ -687,20 +681,20 @@ public class Administratorapp extends javax.swing.JFrame {
         jPanel13.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 140, 160));
 
         jLabel34.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel34.setText("Elev");
+        jLabel34.setText("Student");
         jPanel13.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
-        jButton20.setText("Alege");
+        jButton20.setText("Choose");
         jPanel13.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
 
         jLabel35.setForeground(new java.awt.Color(204, 255, 255));
-        jLabel35.setText("Materie");
+        jLabel35.setText("Subject");
         jPanel13.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, -1));
 
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fizica", "Chimie", "Romana" }));
         jPanel13.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 110, -1));
 
-        jButton21.setText("Adauga Absenta");
+        jButton21.setText("Add Absence");
         jPanel13.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 150, -1));
 
         jList11.setModel(new javax.swing.AbstractListModel() {
@@ -712,18 +706,18 @@ public class Administratorapp extends javax.swing.JFrame {
 
         jPanel13.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 150, 150));
 
-        jButton22.setText("Sterge Absenta");
+        jButton22.setText("Delete Absence");
         jPanel13.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 150, -1));
 
-        jButton23.setText("Motiveaza Absenta");
+        jButton23.setText("Motivate Absence");
         jPanel13.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 150, -1));
 
         jLabel33.setIcon(new javax.swing.ImageIcon("C:\\img_CS\\books (1).jpg")); // NOI18N
         jPanel13.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 430));
 
-        jTabbedPane9.addTab("Absente", jPanel13);
+        jTabbedPane9.addTab("Absences", jPanel13);
 
-        jTabbedPane2.addTab("Elevi", jTabbedPane9);
+        jTabbedPane2.addTab("Students", jTabbedPane9);
 
         getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 480));
 
@@ -1156,7 +1150,6 @@ public class Administratorapp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
