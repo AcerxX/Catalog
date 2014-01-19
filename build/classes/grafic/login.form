@@ -19,20 +19,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="404" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
+              <Component id="jScrollPane1" alignment="0" pref="424" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="378" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
+              <Component id="jScrollPane1" alignment="1" pref="400" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -49,7 +41,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Copywright (C) 2014 Alexandru MIHAI&#xa;Politehnica University of Bucharest.&#xa;&#xa;Catalog Scolare este o apliactie creata special pentru tema la &#xa;Programare Orientata pe Obiecte."/>
+                <Property name="text" type="java.lang.String" value="Copyright [2014] [MIHAI Alexandru]&#xa;&#xa;   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xa;   you may not use this file except in compliance with the License.&#xa;   You may obtain a copy of the License at&#xa;&#xa;     http://www.apache.org/licenses/LICENSE-2.0&#xa;&#xa;   Unless required by applicable law or agreed to in writing, software&#xa;   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xa;   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xa;   See the License for the specific language governing permissions and&#xa;   limitations under the License."/>
               </Properties>
             </Component>
           </SubComponents>
@@ -68,14 +60,6 @@
             <Property name="text" type="java.lang.String" value="File"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\img_CS\Question-icon.jpg"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Forgot Password..."/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
@@ -221,11 +205,11 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Catalog &#x218;colar"/>
+            <Property name="text" type="java.lang.String" value="School Register"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="40" y="30" width="240" height="107"/>
+              <AbsoluteConstraints x="40" y="30" width="270" height="107"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -292,7 +276,7 @@
               <Color blue="ff" green="ff" red="cc" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor" postCode="sorry.setVisible(false);">
-              <Connection code="&quot;jLabel7&quot;" type="code"/>
+              <Connection code="&quot;Username or password misspelled!&quot;" type="code"/>
             </Property>
           </Properties>
           <Constraints>

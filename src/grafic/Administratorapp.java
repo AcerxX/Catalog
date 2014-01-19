@@ -503,8 +503,8 @@ public class Administratorapp extends javax.swing.JFrame {
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "9A", "9B", "9C", "9D", "10A" }));
         jPanel7.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 70, -1));
 
-        jButton11.setText("Adauga");
-        jPanel7.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+        jButton11.setText("Add");
+        jPanel7.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 70, -1));
 
         jList7.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "10D", "11C" };
@@ -830,6 +830,7 @@ public class Administratorapp extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -1055,7 +1056,7 @@ public class Administratorapp extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

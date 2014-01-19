@@ -59,16 +59,16 @@ public class Profesorapp extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 61, -1, -1));
 
-        jLabel1.setText("Alegeti clasa:");
+        jLabel1.setText("Choose class:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, -1, -1));
 
-        jLabel2.setText("Alegeti elevul:");
+        jLabel2.setText("Choose student:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 35, -1, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 61, 160, -1));
 
-        jLabel3.setText("Informatii despre elev:");
+        jLabel3.setText("Student's Information:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
         jLabel4.setText("CNP:");
@@ -77,10 +77,10 @@ public class Profesorapp extends javax.swing.JFrame {
         jLabel5.setText("CNP");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 211, -1, -1));
 
-        jLabel6.setText("Adresa:");
+        jLabel6.setText("Adress:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 243, -1, -1));
 
-        jLabel7.setText("ADRESA");
+        jLabel7.setText("ADRESS");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 243, -1, -1));
 
         jLabel8.setText("Username:");
@@ -90,21 +90,21 @@ public class Profesorapp extends javax.swing.JFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 275, -1, -1));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 61, 56, -1));
 
-        jButton1.setText("Adauga Nota");
+        jButton1.setText("Add Grade");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 60, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 60, 90, -1));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 102, -1, -1));
 
-        jButton2.setText("Sterge Nota");
+        jButton2.setText("Delete Grade");
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 101, 95, -1));
 
-        jButton3.setText("Adauga absenta");
+        jButton3.setText("Add Absence");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 166, -1, -1));
 
         jList1.setModel(new javax.swing.AbstractListModel() {
@@ -148,6 +148,7 @@ public class Profesorapp extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
@@ -161,7 +162,7 @@ public class Profesorapp extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
