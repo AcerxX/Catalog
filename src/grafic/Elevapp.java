@@ -117,6 +117,7 @@ public class Elevapp extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("School Register - Student Panel");
 
         jLabel1.setText("Bine ai venit "+login.user.getText()+" | Elev");
 

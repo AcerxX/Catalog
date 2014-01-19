@@ -84,7 +84,7 @@ public class login extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Catalog Scolar login");
+        setTitle("School Register - Login");
         setAlwaysOnTop(true);
         setBackground(java.awt.Color.orange);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
